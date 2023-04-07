@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* overflow: hidden; */
+}
+
+.background {
+    background-image: url('/source/workbg.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: scale(2);
+    transition: transform 2s ease-in-out;
+    z-index: -1;
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    font-family: 'Alegreya Sans SC', sans-serif;
+}
+
+@keyframes backgroundAnimation {
+    0% {
+        background-position: center;
+    }
+
+    50% {
+        background-position: bottom right;
+    }
+    100% {
+        background-position: center;
+    }
+}
+
+
+
+
+header {
+    position: fixed;
+    top: -20px;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10000;
+}
+
+header .logo {
+    color: blanchedalmond;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+header .logo img {
+    width: 20vh;
+    /* opacity: 0; */
+}
+
+header ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header ul li {
+    list-style: none;
+    margin-left: 20px;
+}
+
+header ul li a {
+    text-decoration: none;
+    padding: 6px 15px;
+    color: aliceblue;
+    border-radius: 20px;
+}
+
+header ul li a:hover,
+header ul li a.active {
+    background: #fff;
+    color: #3f1078;
+}
+
+
+.heading{
+    transition: opacity 1s ease-in-out;
+}
+
+
+
+.content h1{
+    color: rgb(133 36 206);
+    font-size: 50px;
+}
+
+.projects{
+    text-shadow : 1px 1px 2px red, 0 0 1em grey, 0 0 0.2em rgb(255, 255, 255);
+    color : azure;
+    margin-top: 150px;
+    
+}
+
+.snap{
+    /* margin-top: 170px; */
+    /* font-family: 'Mountains of Christmas', cursive; */
+    /* width: 40vw; */
+    text-decoration: none;
+    
+    color: burlywood;
+    text-shadow: 1px 1px 2px rgba(31, 40, 163, 0.776), 0 0 1em rgb(44, 79, 185), 0 0 0.2em rgb(255, 255, 255);
+}
+

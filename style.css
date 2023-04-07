@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Alegreya Sans SC', sans-serif;
+    box-sizing: border-box;
+    border-width: 0;
+    scroll-behavior: smooth;
+}
+
+#pbar {
+    position: fixed;
+    height: 10vh;
+    /* min-width: 0px; */
+    background-color: #ca6868;
+}
+
+
+body {
+
+    background-image: url('source/bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    overflow: auto;
+    /* back */
+    min-height: 100vh;
+    background-position-x: 0;
+    background-position-y: -30px;
+    overflow-x: hidden;
+    background-color: #060303;
+    background-attachment: scroll;
+}
+
+header {
+    position: absolute;
+    top: -20px;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10000;
+}
+
+header .logo {
+    color: blanchedalmond;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+header .logo img {
+    width: 20vh;
+}
+
+header ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header ul li {
+    list-style: none;
+    margin-left: 20px;
+}
+
+header ul li a {
+    text-decoration: none;
+    padding: 6px 15px;
+    color: aliceblue;
+    border-radius: 20px;
+}
+
+header ul li a:hover,
+header ul li a.active {
+    background: #fff;
+    color: #3f1078;
+}
+
+section {
+    position: relative;
+    width: 100%;
+    padding: 100px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px;
+    /* overflow: hidden; */
+}
+
+/* section::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+
+} */
+
+section img {
+    position: absolute;
+    /* top: 0;
+    left: 0; */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+#sun {
+    width: 40vh;
+    height: auto;
+    top: 20vh;
+    animation-name: shine;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    left: 70%;
+    /* margin: 1px; */
+    transform: translateY(0);
+    transition: all 4s ease-out;
+    mix-blend-mode: screen;
+    z-index: 1;
+}
+
+@keyframes shine {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+
+
+.planet {
+    width: 3vh;
+    height: auto;
+    z-index: -3;
+    /* position: relative; */
+}
+
+#galexy {
+    mix-blend-mode: screen;
+}
+
+#btn {
+    text-decoration: none;
+
+    /* top: 60vh; */
+    cursor: pointer;
+    position: relative;
+    padding: 8px 30px;
+    border-radius: 40px;
+    color: #fff;
+    background: #3f107877;
+    text-decoration: none;
+    font-size: 2em;
+    transform: translateY(100px);
+    animation-name: upar;
+    animation-duration: 2s;
+    display: inline-block;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+
+
+
+.sec {
+    position: relative;
+    padding: 100px;
+    /* background: #80ff80; */
+    color: azure;
+}
+
+.sec h2 {
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.sec h2 {
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+button {
+    /* opacity: 1; */
+    transform: translateY(0);
+    transition: all 0.5s ease-out;
+}
+
+
+
+
+@keyframes upar {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+
+#dp {
+    height: auto;
+    position: relative;
+    /* background-color: #ccc; */
+}
+
+#dp img {
+    width: 300px;
+    position: absolute;
+    top: 250px;
+    left: 9%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+/* .intro{
+    tex
+} */
+
+.text {
+    text-shadow: 1px 1px 2px red, 0 0 1em grey, 0 0 0.2em grey;
+    letter-spacing: 0.1rem;
+    line-height: 1.6rem;
+    font-family: monospace;
+    word-spacing: 0.3rem;
+    font-size: larger;
+}
+
+.text a {
+    text-decoration: none;
+}
+
+button {
+    background-color: #22135b85;
+    color: white;
+    font-size: 24px;
+    padding: 16px 32px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0c062f;
+}
+
+button:active {
+    background-color: #1b3fac;
+}
+
+.contact {
+    margin-top: 10vh;
+    display: flex;
+    justify-content: center;
+}

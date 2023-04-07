@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@300&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.background {
+    background-image: url('/source/conbg.jpg');
+    background-size: cover;
+    background-position: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: scale(2);
+    transition: transform 2s ease-in-out;
+    z-index: -1;
+}
+
+.content {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    /* text-align: center; */
+    font-size: 3em;
+    color: white;
+    font-weight: bold;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10000;
+    font-family: 'Alegreya Sans SC', sans-serif;
+    margin-bottom: 0px;
+}
+
+header .logo {
+    color: blanchedalmond;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+header .logo img{
+    width: 20vh;
+}
+
+header ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header ul li {
+    font-size: 1.2rem;
+    list-style: none;
+    margin-left: 20px;
+    /* margin-right: ; */
+}
+
+header ul li a {
+    text-decoration: none;
+    padding: 6px 15px;
+    color: aliceblue;
+    border-radius: 20px;
+}
+
+header ul li a:hover,
+header ul li a.active {
+    background: #fff;
+    color: #3f1078;
+}
+
+#image {
+    left: -20px;
+    opacity: 0;
+    transition: opacity 2s;
+    width: 300px;
+    /* height: 300px; */
+    margin: auto;
+    /* mix-blend-mode: screen; */
+    box-shadow: 20px 20px 10px 0px rgba(100, 100 100, 0.9);
+}
+
+.headi{
+    padding: 30px;
+    margin-left: 10vw;
+    text-shadow: 1px 1px 2px red, 0 0 1em grey, 0 0 0.2em rgb(255, 255, 255);
+}
+
+.container {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 20px;
+}
+
+.cont{
+    margin-top: 40px;
+}
+
+/* Styles for the form */
+form {
+	margin-top: 20px;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 20px;
+}
+
+label {
+	display: block;
+	font-size: 16px;
+	margin-bottom: 5px;
+}
+
+input,
+textarea {
+	padding: 10px;
+	border-radius: 5px;
+	border: none;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+	font-size: 16px;
+}
+
+textarea {
+	resize: none;
+	min-height: 100px;
+}
+
+button[type="submit"] {
+	background-color: #007bff;
+	color: #fff;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+	cursor: pointer;
+	font-size: 16px;
+	transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+	background-color: #0062cc;
+}
+
+/* Styles for the social media links */
+.social-links {
+    /* top: 80vh; */
+    color: antiquewhite;
+	margin-top: -87px;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+    text-shadow: 1px 1px 2px red, 0 0 1em grey, 0 0 0.2em rgb(255, 255, 255);
+}
+
+.social-links h2 {
+	margin-right: 20px;
+	font-size: 16px;
+}
+
+.social-links i{
+    padding: 10px;
+    font-size: 30px;
+    color: blue;
+    text-shadow: 1px 1px 2px red, 0 0 1em grey, 0 0 0.2em rgb(255, 255, 255);
+}
+
