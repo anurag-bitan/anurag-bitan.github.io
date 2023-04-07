@@ -5,23 +5,20 @@
 }
 
 body {
-    /* overflow: hidden; */
+    overflow: hidden;
 }
 
 .background {
-    background-image: url('/source/workbg.jpg');
-    background-size: cover;
-    background-position: center center;
-    background-attachment: fixed;
-
     position: fixed;
+    background-position: center;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    transform: scale(2);
-    transition: transform 2s ease-in-out;
-    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background-image: url('/source/aboutbg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: backgroundAnimation 20s linear 5;
 }
 
 .content {
@@ -30,7 +27,6 @@ body {
     width: 100%;
     height: 100%;
     overflow: auto;
-    font-family: 'Alegreya Sans SC', sans-serif;
 }
 
 @keyframes backgroundAnimation {
@@ -41,13 +37,11 @@ body {
     50% {
         background-position: bottom right;
     }
+
     100% {
         background-position: center;
     }
 }
-
-
-
 
 header {
     position: fixed;
@@ -99,32 +93,21 @@ header ul li a.active {
     background: #fff;
     color: #3f1078;
 }
-
-
-.heading{
-    transition: opacity 1s ease-in-out;
+#image {
+    left: -20px;
+    opacity: 0;
+    transition: opacity 2s;
+    width: 350px;
+    /* height: 300px; */
+    margin: auto;
+    margin-top: 20vh;
+    margin-left: 7vw;
+    /* mix-blend-mode: screen; */
+    box-shadow: 20px 20px 10px 0px rgba(100, 100 100, 0.9);
+    pointer-events: none;
 }
 
-
-
-.content h1{
-    color: rgb(177 219 239);
-    font-size: 50px;
+.desc{
+    color: azure;
+    font-size: larger;
 }
-
-.projects{
-    text-shadow : 1px 1px 2px red, 0 0 1em grey, 0 0 0.2em rgb(255, 255, 255);
-    color : azure;
-    margin-top: 150px;
-}
-
-.snap{
-    /* margin-top: 170px; */
-    /* font-family: 'Mountains of Christmas', cursive; */
-    /* width: 40vw; */
-    text-decoration: none;
-
-    color: burlywood;
-    text-shadow: 1px 1px 2px rgba(31, 40, 163, 0.776), 0 0 1em rgb(44, 79, 185), 0 0 0.2em rgb(255, 255, 255);
-}
-

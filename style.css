@@ -52,6 +52,7 @@ header .logo {
     font-size: 2em;
     text-transform: uppercase;
     letter-spacing: 3px;
+    pointer-events: none;
 }
 
 header .logo img {

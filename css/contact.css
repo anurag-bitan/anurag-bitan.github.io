@@ -102,6 +102,7 @@ header ul li a.active {
     margin: auto;
     /* mix-blend-mode: screen; */
     box-shadow: 20px 20px 10px 0px rgba(100, 100 100, 0.9);
+    pointer-events: none;
 }
 
 .headi{
