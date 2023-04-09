@@ -24,11 +24,16 @@ body {
 }
 
 .content {
-    position: relative;
+    /* position: relative; */
     z-index: 1;
     width: 100%;
-    height: auto;
-    overflow: hidden;
+    height: 150vh;
+
+    overflow-x: hidden;
+    overflow-y:hidden;
+    scrollbar-width: none;
+    contain: content;
+    -ms-overflow-style: none;
 }
 
 @keyframes backgroundAnimation {
@@ -50,11 +55,13 @@ header {
     top: -20px;
     left: 0;
     width: 100%;
-    padding: 30px 100px;
+    padding: 30px 100px; 
+    /* 30px 0; */
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 10000;
+    overflow: hidden;
 }
 
 header .logo {
@@ -95,42 +102,88 @@ header ul li a.active {
     background: #fff;
     color: #3f1078;
 }
+
+
+#dp{
+    position: fixed;
+}
 #image {
     left: -20px;
     opacity: 0;
     transition: opacity 2s;
     width: 350px;
     /* height: 300px; */
-    margin: auto;
-    margin-top: 20vh;
-    margin-left: 7vw;
+    /* position: relative; */
+    /* margin: auto; */
+    margin-top: 26vh;
+    margin-left: 4vw;
     /* mix-blend-mode: screen; */
     box-shadow: 20px 20px 10px 0px rgba(100, 100 100, 0.9);
     pointer-events: none;
 }
 
-.desc{
+.desc {
     color: azure;
     font-size: larger;
 }
 
-.contener{
+.contener {
     /* position: static; */
+    box-sizing: border-box;
     display: flex;
-    overflow: hidden;
-    width:98vw;
+    overflow: auto;
+    scrollbar-width: 0;
+    width: 100vw;
+    height: 150vh;
     /* flex-direction: row ; */
 }
 
-.speech{
+.speech {
     /* padding: 20vh 10vw; */
     /* display: flex; */
+    /* height: 60vh; */
+    position: fixed;
+    scrollbar-width: none;
+    padding: 10vw;
     color: antiquewhite;
     text-shadow: 1px 1px 2px red, 0 0 1em grey, 0 0 0.2em rgb(255, 255, 255);
     letter-spacing: 0.3rem;
     word-spacing: 0.6rem;
     /* left: 50vw; */
     scroll-behavior: smooth;
-    overscroll-behavior-y: contain;
-    /* text-align: ; */
+    /* overflow-y: scroll; */
+    /* hide scrollbar */
+    /* word-break: ; */
+    -ms-overflow-style: none;
+    top: 12vh;
+    left: 30vw;
+    /* right: 5vw; */
+    /* width: ; */
+    /* content: fit; */
+}
+
+.speech::-webkit-scrollbar {
+    display: none;
+}
+
+.d{
+    align-items: center;
+    align-content: center;;
+}
+
+.down{
+    color: aqua;
+    text-shadow: 1px 1px 2px rgba(188, 20, 109, 0.911), 0 0 1em rgb(10, 124, 172), 0 0 0.2em rgb(255, 255, 255);
+    background: rgba(0,0,0,0);
+    font-size: 20px;
+    cursor: pointer;
+    border: none
+}
+
+button:hover {
+    color: #829c195e;
+}
+
+button:active {
+    color: #9cc819dd;
 }

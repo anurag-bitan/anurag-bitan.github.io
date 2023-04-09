@@ -14,42 +14,23 @@ setTimeout(function () {
 }, 2000);
 
 
-function writeText(text, element, delay) {
-    // Get the current text of the element
-    const currentText = element.innerText;
+var header = document.querySelector('header'); // select the header element
+var limit = 60; // set the scroll limit in pixels
 
-    // Calculate the length of the new text
-    const newTextLength = text.length;
+window.addEventListener('scroll', function () {
+    console.log(window.pageYOffset);
+    var opacity = 1 - (window.pageYOffset / limit); // calculate the new opacity value
+    header.style.opacity = opacity; // set the new opacity value for the header element
+});
 
-    // Calculate the total duration of the animation
-    const duration = newTextLength * delay;
 
-    // Create a new promise to handle the animation
-    return new Promise((resolve) => {
-        // Define the animation function
-        function animate(currentIndex, currentDelay) {
-            // Add the next character to the current text
-            const nextCharacter = text.charAt(currentIndex);
-            element.innerText = currentText + nextCharacter;
-
-            // Wait for the delay before adding the next character
-            setTimeout(() => {
-                // If there are more characters, continue the animation
-                if (currentIndex + 1 < newTextLength) {
-                    animate(currentIndex + 1, delay);
-                } else {
-                    // If the animation is complete, resolve the promise
-                    resolve();
-                }
-            }, currentDelay);
-        }
-
-        // Start the animation
-        animate(0, delay);
-    });
+function downloadFile() {
+    var url = "https://drive.google.com/file/d/1_sOemyB_Sx9J6XRawPhdznwZtnqpoVlG/view?usp=sharing"; // Replace with the URL of your file
+    var filename = "Anurag_Bhattacharya_resume.pdf"; // Replace with the desired filename
+    var a = document.createElement("a");
+    a.href = url;
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
 }
-
-// Example usage:
-const descElement = document.querySelector('.desc');
-writeText('Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet quis nisi natus consequatur quod incidunt reprehenderit praesentium nesciunt laboriosam libero maiores explicabo id amet excepturi omnis, a exercitationem hic! Minus laborum inventore enim eius architecto vel quisquam natus, excepturi eum, distinctio deleniti beatae. Adipisci repudiandae sit nesciunt ipsum, fugit culpa 👀', descElement, 50)
-    .then(() => writeText('This is a big text that continues for a while', descElement, 50));
