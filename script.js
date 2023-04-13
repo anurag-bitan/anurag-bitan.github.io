@@ -94,3 +94,4 @@ window.addEventListener('scroll', function() {
         image.style.opacity = '0';
     }
 });
+
